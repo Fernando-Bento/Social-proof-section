@@ -72,7 +72,8 @@ section#aval{
     grid-area: conteudo;
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    
+    justify-content: space-between;
     margin: 50px 0;
 }
 

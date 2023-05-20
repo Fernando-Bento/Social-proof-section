@@ -11,6 +11,7 @@
         grid-template-areas: 
         "cabeca conteudo"
         "usuarios usuarios";
+        row-gap: 50px;
         grid-template-columns: 50% auto;
     }
 
@@ -27,14 +28,15 @@
         width: 90%; 
     }
 
-    section#aval{
-        width: 100%;
-    }
-
     div.reviews{
         position: relative;
         display: flex;
         width: 450px;
+    }
+
+    section#aval{
+        width: 100%;
+        margin: 20px 0;
     }
 
     section#aval > div.reviews:nth-child(2){
@@ -57,6 +59,7 @@
      article{
         position: relative;
         width: 400px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
      }
 
      article > p{
@@ -70,4 +73,5 @@
     section#persons > article:nth-child(3){
         top: 50px;
     }
+
 }
