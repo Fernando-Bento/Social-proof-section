@@ -1,0 +1,73 @@
+@media screen and (min-width: 1000px){
+    body{
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        height: 100vh;
+        align-items: center;
+        padding: 0;
+        animation: aparecer 0.5s;
+    }
+
+    main{
+        grid-template-areas: 
+        "cabeca conteudo"
+        "usuarios usuarios";
+        grid-template-columns: 50% auto;
+    }
+
+    header{
+        text-align: left;
+    }
+
+    header > h1{
+        font-size: 4em;
+        width: 80%;  
+    }
+
+    header > p{
+        width: 90%; 
+    }
+
+    section#aval{
+        width: 100%;
+    }
+
+    div.reviews{
+        position: relative;
+        display: flex;
+        width: 450px;
+    }
+
+    section#aval > div.reviews:nth-child(2){
+        left: 50px;
+    }
+
+    section#aval > div.reviews:nth-child(3){
+        left: 100px;
+    }
+
+    div.stars{
+        padding-right: 20px;
+    }
+
+    section#persons{
+        display: flex;
+        column-gap: 30px;
+     }
+
+     article{
+        position: relative;
+        width: 400px;
+     }
+
+     article > p{
+        font-size: 1em;
+     }
+
+    section#persons > article:nth-child(2){
+        top: 25px;
+    }
+
+    section#persons > article:nth-child(3){
+        top: 50px;
+    }
+}

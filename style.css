@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+:root{
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+body{
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-position: center top, center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+    "cabeca"
+    "conteudo"
+    "usuarios";
+    width: 80vw;
+}
+
+header{
+    grid-area: cabeca;
+}
+
+section#persons{
+    grid-area: usuarios;
+}
+
+header, section#aval{
+    text-align: center;
+}
+
+header > h1{
+    color: var(--Very-Dark-Magenta);
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+header > p{
+    color: var(--Dark-Grayish-Magenta);
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+section#aval{
+    grid-area: conteudo;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    margin: 50px 0;
+}
+
+section#aval > div.reviews{
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 20px;
+    border-radius: 20px;
+    transition: transform 0.5s;
+    animation: aparecer 2s;
+}
+
+div.reviews:hover{
+    transform: scale(1.05);
+}
+
+div.reviews > p{
+    color: var(--Very-Dark-Magenta);
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
+div.stars{
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    column-gap: 7px;
+}
+
+div.stars > img{
+    width: 20px;
+}
+
+div.stars > img:hover{
+    transform: scale(1.2);
+}
+
+section#persons > article{
+    background-color: var(--Very-Dark-Magenta);
+    color: white;
+    padding: 40px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+div.user{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    margin-bottom: 30px;
+}
+
+div.user > h1{
+    font-size: 1.2em;
+}
+
+div.name > h1::after{
+    content: "Verified Buyer";
+    display: block;
+    font-weight: 400;
+    color: var(--Soft-Pink);
+}
+
+div.user > img{
+    width: 40px;
+    border-radius: 50%;
+    transition: transform 1s;
+}
+
+img:hover{
+    transform: scale(1.5);
+}
+
+article{
+    transition: transform 0.5s;
+}
+
+article:hover{
+    transform: scale(1.05);
+}
+
+article > p{
+    font-size: 1.2em;
+    line-height: 1.5;
+}
